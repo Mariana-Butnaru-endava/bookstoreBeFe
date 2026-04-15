@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <backEndConfig>
+        <baseURL>https://demoqa.com/</baseURL>
+        <contentType>application/json</contentType>
+    </backEndConfig>
+    <frontEndConfig>
+        <localBrowser>chrome</localBrowser>
+        <url>https://demoqa.com/login</url>
+        <headless>false</headless>
+        <gpu>--disable-gpu</gpu>
+        <infobars>--disable-infobars</infobars>
+        <sandbox>--no-sandbox</sandbox>
+        <remoteUrl>http://localhost:4444/wd/hub</remoteUrl>
+        <implicitWait>10</implicitWait>
+        <scriptTimeout>15</scriptTimeout>
+        <pageLoadTimeout>30</pageLoadTimeout>
+    </frontEndConfig>
+    <databaseConfig>
+
+    </databaseConfig>
+</configuration>
