@@ -14,18 +14,18 @@ public class LoggerUtility {
     public static void startTest(String testName, Scenario scenario) {
         LoggerUtility.scenario = scenario;
         String message = String.format("======= Test: %s start ======", testName);
-        logger.info(message);
+        //logger.info(message);
         scenario.log(message);
     }
 
     public static void endTest(String testName) {
         String message = String.format("======= Test: %s end ======", testName);
-        logger.info(message);
+        //logger.info(message);
         scenario.log(message);
     }
 
     public static void logInfo(Object message) {
-        logger.info(message);
+        //logger.info(message);
         scenario.log(message.toString());
     }
 

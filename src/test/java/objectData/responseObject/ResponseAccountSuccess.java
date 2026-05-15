@@ -29,7 +29,10 @@ public class ResponseAccountSuccess implements ResponseNotNull {
     }
 
     public void validateBookPresence(String actualBook) {
-        Assert.assertTrue(books.stream().anyMatch(book -> book.getIsbn().equals(actualBook)),
+        Assert.assertTrue(books
+                        .stream()
+                        .anyMatch(
+                                book -> book.getIsbn().equals(actualBook)),
                 "Book with ISBN " + actualBook + " is not present in the account.");
     }
 }

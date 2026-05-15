@@ -1,0 +1,14 @@
+{
+  "userId": "TestUserID",
+  "collectionOfIsbns": [
+    {
+      "isbn": "9781449337711"
+    },
+    {
+      "isbn": "9781449365035"
+    },
+    {
+      "isbn": "9781491904244"
+    }
+  ]
+}
