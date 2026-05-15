@@ -2,6 +2,7 @@ package steps.backend;
 
 import actions.backend.AccountActions;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class AccountServiceSteps {
@@ -16,5 +17,15 @@ public class AccountServiceSteps {
     @And("I generate token for new account")
     public void iGenerateTokenForNewAccount() {
         accountActions.generateAccountToken();
+    }
+
+    @When("I get account")
+    public void iGetNewAccount() {
+        accountActions.getAccount();
+    }
+
+    @Then("I delete account from backend")
+    public void iDeleteAccountFromBackend() {
+        accountActions.deleteAccount();
     }
 }

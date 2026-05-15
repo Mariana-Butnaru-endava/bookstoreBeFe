@@ -1,16 +1,16 @@
-Feature: Create account
-  In order to make actions I need to create an account and authenticate it
-
-  @UI
-  Scenario: Create account from backend
-    When I create a new account from backend
-    And I generate token for new account
-    And I login into application
+Feature: Bookstore
+  Book management for an account
 
   @BE
-  Scenario: Account flow from backend
+  Scenario: Books flow from backend
     When I create a new account from backend
     And I generate token for new account
+    And books are added to account
+    And book "9781449325862" is updated for account
+    And I get account
+    And book "9781449325862" is deleted from account
+    And I get account
+    And all books are deleted from account
     And I get account
     Then I delete account from backend
     And I get account

@@ -15,7 +15,7 @@ public class ServiceHelper {
     public static void requestLogs(RequestSpecification requestSpecification, String path, String method) {
         LoggerUtility.logInfo("====== Info about request: ======");
         LoggerUtility.logInfo("====== Request method: " + method);
-        LoggerUtility.logInfo("====== " + getPath(path));
+        LoggerUtility.logInfo("====== Endpoint: " + getPath(path));
         LoggerUtility.logInfo("====== Request body: " + getRequestBody(requestSpecification));
     }
 
@@ -29,7 +29,7 @@ public class ServiceHelper {
 
     public static String getPath(String path) {
         Configuration configuration = GeneralXML.createConfig(Configuration.class);
-        return "Request URI: " + configuration.getBackEndConfig().getBaseURL() + path;
+        return "- Request URI: " + configuration.getBackEndConfig().getBaseURL() + path;
     }
 
     @SneakyThrows(Exception.class)

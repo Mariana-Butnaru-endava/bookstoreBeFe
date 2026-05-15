@@ -20,7 +20,6 @@ public class Account extends ObjectFromFile {
     }
 
     private void adjustUsername() {
-
         userName += UUID.randomUUID().toString();
     }
 }
