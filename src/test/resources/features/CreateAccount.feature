@@ -2,10 +2,11 @@ Feature: Create account
   In order to make actions I need to create an account and authenticate it
 
   @UI
-  Scenario: Create account from backend
+  Scenario: Create account from backend and login from frontend
     When I create a new account from backend
     And I generate token for new account
     And I login into application
+    Then I logout from application
 
   @BE
   Scenario: Account flow from backend

@@ -2,6 +2,7 @@ package service.serviceImplementation;
 
 import io.restassured.response.ValidatableResponse;
 import io.restassured.response.ValidatableResponseOptions;
+import objectData.requestObject.Books;
 import objectData.requestObject.RequestAccountBooks;
 import objectData.requestObject.RequestAccountBook;
 import service.apiService.BookstoreApiService;
@@ -16,7 +17,7 @@ public class BookstoreServiceImpl implements BookstoreServiceInterface {
     }
 
     @Override
-    public ValidatableResponse addBooksToAccount(String token, RequestAccountBooks body) {
+    public ValidatableResponse addBooksToAccount(String token, Books body) {
         return bookstoreApiService.post(token, body, BookstoreEndpoints.BOOKSTORE_ADD);
     }
 

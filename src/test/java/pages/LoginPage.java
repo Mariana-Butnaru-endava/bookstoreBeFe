@@ -20,6 +20,10 @@ public class LoginPage extends BasePage {
     @FindBy(id = "login")
     private WebElement loginButton;
 
+    public boolean isLoginButtonDisplayed() {
+        return loginButton.isDisplayed();
+    }
+
     public ProfilePage loginIntoApplication(Account account) {
         //driver.findElement(By.id("userName")).sendKeys(account.getUserName());
         userName.sendKeys(account.getUserName());
